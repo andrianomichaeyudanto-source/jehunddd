@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untuk Jehan Aulia</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      text-align: center;
+      animation: fade 0.6s ease;
+    }
+
+    section.active {
+      display: flex;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* INTRO */
+    .intro {
+      background-image: url('https://i.imgur.com/CidiUpb.jpg');
+      background-size: cover;
+      background-position: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .intro::before,
+    .bg-photo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      pointer-events: none;
+    }
+
+    .intro > div,
+    .bg-photo > div {
+      position: relative;
+      max-width: 720px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      line-height: 1.45;
+      margin: 0 0 12px;
+      opacity: 0.95;
+    }
+
+    .btn {
+      padding: 14px 32px;
+      border: none;
+      border-radius: 999px;
+      background: white;
+      color: #4f46e5;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .section-box {
+      background: rgba(0,0,0,0.55);
+      padding: 28px;
+      border-radius: 24px;
+      backdrop-filter: blur(6px);
+    }
+
+    .bg-photo {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    /* LOVEU */
+    .love-text {
+      font-size: 3rem;
+      letter-spacing: 4px;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
+
+    /* NAVIGATION (hanya muncul di LOVEU) */
+    .nav-bottom {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      gap: 8px;
+      z-index: 10;
+    }
+
+    .nav-bottom button {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: rgba(255,255,255,0.85);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<section class="intro active" id="intro">
+  <div>
+    <h1>Untuk Jehan Aulia 🤍</h1>
+    <p>
+      Hai sayangg, baru capek yaaa..<br>
+      Ada pesenn nihh dari aku
+    </p>
+    <button class="btn" onclick="showPage('pesan')">Mulai</button>
+  </div>
+</section>
+
+<!-- PESAN UTAMA -->
+<section class="bg-photo" id="pesan" style="background-image:url('https://i.imgur.com/uOpPKtE.jpg')">
+  <div class="section-box">
+    <p>
+haii sayanggg, apakabarrr.<br>
+aku tauu pastii ahir ahir cape banget yaaa sayangg.<br>
+just wannaa say that im so proud of u bebbb. aku mungkin gabisa nunjukin ini secara langsung,<br>
+tapi aku harap darii hall kecil yang aku coba bikin buat kamuu ini, kamu bisa senengg yaa.<br>
+aku cumin mau bilangg gapapaa capek, gapapaa banget sayanggg, wajarrr banget.<br>
+dari apa yang aku lihat, kamu selalu ngedahuluin hal hal lain daripada dirimu sendiri beb.<br>
+aku senengg karenaa cewekku iniii orangnya bisa diandelinnn.<br><br>
+
+kamu selalu berusaha memenuhi tanggung jawabmu sayangg,<br>
+tapi aku mau kamu tauu semua usaha kamu itu udah cukup beb.<br>
+ambil ruang buat diri kamu sendiri yaa.<br><br>
+
+aku selalu ada di sini buat kamu 🤍<br><br>
+
+Loveu sayangku Jehan Auliaa
+    </p>
+    <button class="btn" onclick="showPage('penutup')">Lanjut</button>
+  </div>
+</section>
+
+<!-- PENUTUP -->
+<section class="bg-photo" id="penutup" style="background-image:url('https://i.imgur.com/dFawKid.jpg')">
+  <div class="section-box">
+    <p>
+Makasih jehann sudah meluangkan waktu buat baca ini.<br>
+maaf kalau masih sederhana banget.<br><br>
+
+aku bangga banget sama kamu.<br><br>
+
+Loveu & Missu Always 🤍
+    </p>
+    <button class="btn" onclick="showPage('akhir')">Terakhir</button>
+  </div>
+</section>
+
+<!-- LOVEU -->
+<section class="bg-photo" id="akhir" style="background-image:url('https://i.imgur.com/UVM9S7C.jpg')">
+  <div class="section-box">
+    <h1 class="love-text">LOVEU 🤍</h1>
+  </div>
+</section>
+
+<!-- NAV -->
+<div class="nav-bottom">
+  <button onclick="showPage('intro')">Intro</button>
+  <button onclick="showPage('pesan')">Pesan</button>
+  <button onclick="showPage('penutup')">Penutup</button>
+</div>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+
+    document.querySelector('.nav-bottom').style.display =
+      id === 'akhir' ? 'flex' : 'none';
+  }
+</script>
+
+</body>
+</html>
